@@ -169,9 +169,9 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 220px;
+  height: 275px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--color-border);
   box-shadow: 0 6px 20px rgba(38, 43, 49, 0.1);

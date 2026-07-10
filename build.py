@@ -142,7 +142,7 @@ def build_index():
       <div class="hero-grid">
         <div class="hero-left">
           <div class="hero-photo">
-            <img src="images/headshot-square.jpg" alt="Portrait of Nicholas B. King" width="220" height="220">
+            <img src="images/headshot-full.jpg" alt="Portrait of Nicholas B. King" width="240" height="300">
           </div>
           <h1>Nicholas B. King</h1>
 
