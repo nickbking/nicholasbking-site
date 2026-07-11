@@ -109,6 +109,13 @@ HOMEPAGE_RESEARCH = [
         "url": "https://doi.org/10.1186/s12940-025-01223-1",
     },
     {
+        "title": "Science and Public Policy in a Post-Pandemic World",
+        "authors": "King NB.",
+        "venue": "In Jean-Louis Denis, Catherine R&eacute;gis &amp; Daniel Weinstock, Eds., <em>Pandemic Societies</em>. Montreal: McGill-Queen&rsquo;s University Press (2021)",
+        "description": "How should we deal with the demystification of scientific authority and weaponization of uncertainty during the COVID-19 pandemic? This chapter argues that rather than lamenting this loss of authority, we can see it as an opportunity to build a more robust and enduring relationship between the scientific ethos and democratic institutions.",
+        "url": "files/King_2021_Science_and_Public_Policy_in_a_PostPandemic_World.pdf",
+    },
+    {
         "title": "How global is global health research? A large-scale analysis of trends in authorship",
         "authors": "Dimitris MC, Gittings M, King NB.",
         "venue": "<em>BMJ Global Health</em> 6:e003758 (2021)",
