@@ -75,7 +75,7 @@ def footer():
       <div>
         <strong>Nicholas B. King</strong><br>
         Associate Professor, McGill University<br>
-        <a href="mailto:Nicholas.king@mcgill.ca">Nicholas.king@mcgill.ca</a>
+        <a href="mailto:nicholas.king@mcgill.ca">nicholas.king@mcgill.ca</a>
       </div>
       <ul class="footer-nav">
 """ + "\n".join(
@@ -135,13 +135,11 @@ HOMEPAGE_RESEARCH = [
 def build_index():
     research_html = []
     for r in HOMEPAGE_RESEARCH:
-        research_html.append("""        <div class="research-box">
-          <h3><a href="{url}" target="_blank" rel="noopener">{title}</a></h3>
-          <p class="research-meta">{authors} {venue}</p>
-          <p>{description}</p>
-        </div>""".format(
-            url=r["url"], title=r["title"], authors=r["authors"],
-            venue=r["venue"], description=r["description"],
+        research_html.append("""          <div class="research-box">
+            <h3><a href="{url}" target="_blank" rel="noopener">{title}</a></h3>
+            <p>{description}</p>
+          </div>""".format(
+            url=r["url"], title=r["title"], description=r["description"],
         ))
     research_html = "\n".join(research_html)
 
@@ -156,6 +154,7 @@ def build_index():
           <p class="position-block">
             <strong>Associate Professor</strong><br>
             Department of Equity, Ethics, and Policy<br>
+            Department of Epidemiology, Biostatistics, and Occupational Health<br>
             Max Bell School of Public Policy<br>
             McGill University
           </p>
@@ -166,7 +165,7 @@ def build_index():
 
           <div class="button-row">
             <a class="btn btn-secondary" href="files/King_CV_2026.pdf">CV</a>
-            <a class="btn btn-secondary" href="mailto:Nicholas.king@mcgill.ca">Contact</a>
+            <a class="btn btn-secondary" href="mailto:nicholas.king@mcgill.ca">Contact</a>
             <a class="btn btn-secondary" href="https://scholar.google.ca/citations?user=LWgI4HgAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
           </div>
 
@@ -184,8 +183,10 @@ def build_index():
         </div>
 
         <div class="hero-right">
-          <h2 class="section-title">Research</h2>
+          <h2 class="section-title">Selected publications</h2>
+          <div class="research-grid">
 {research_html}
+          </div>
         </div>
       </div>
     </section>
@@ -353,7 +354,7 @@ def build_teaching():
 def build_contact():
     body = """    <section class="block container" style="padding-top:48px;">
       <h1>Contact</h1>
-      <p>Email: <a href="mailto:Nicholas.king@mcgill.ca">Nicholas.king@mcgill.ca</a></p>
+      <p>Email: <a href="mailto:nicholas.king@mcgill.ca">nicholas.king@mcgill.ca</a></p>
       <p>Department of Equity, Ethics &amp; Policy<br>
       Faculty of Medicine and Health Sciences<br>
       McGill University<br>
