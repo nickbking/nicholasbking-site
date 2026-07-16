@@ -4,7 +4,7 @@ from data import (
     JOURNAL_ARTICLES, BOOK_CHAPTERS, OTHER_PUBLICATIONS, INVITED_TALKS,
     CONFERENCE_PRESENTATIONS, MEDIA, RESEARCH_AREAS, SOFTWARE,
     TEACHING_COURSES, TEACHING_AWARDS, APPOINTMENTS_CURRENT,
-    APPOINTMENTS_PREVIOUS, SELECTED_GRANTS, PUBLICATION_LINKS, TALK_LINKS,
+    APPOINTMENTS_PREVIOUS, SELECTED_GRANTS, PUBLICATION_LINKS,
 )
 
 SITE = os.path.dirname(os.path.abspath(__file__))
@@ -12,7 +12,6 @@ SITE = os.path.dirname(os.path.abspath(__file__))
 NAV = [
     ("index.html", "Home"),
     ("publications.html", "Publications"),
-    ("talks.html", "Public Lectures"),
     ("software.html", "Software"),
     ("teaching.html", "Teaching"),
     ("media.html", "Media"),
@@ -252,37 +251,6 @@ def build_publications():
     )
 
 
-# ---------------------------------------------------------------- talks.html
-
-PUBLIC_LECTURES = [
-    ("Defining freedom in the time of COVID", "https://www.youtube.com/watch?v=p98ex_FeMWA"),
-    ("Weaponizing Uncertainty During the COVID-19 Pandemic", "https://www.youtube.com/watch?v=gZxu9fg1iYU"),
-    ("Health Disparities Amid the COVID-19 Pandemic", "https://www.mcgill.ca/maxbellschool/article/policy-challenges-during-pandemic-video/video-health-disparities-amid-covid-19-pandemic"),
-    ("Evidence and Uncertainty During the COVID-19 Pandemic", "https://www.mcgill.ca/maxbellschool/article/briefing-evidence-and-uncertainty-during-covid-19-pandemic"),
-]
-
-
-def build_talks():
-    items = "\n".join(
-        '        <li><a href="{url}" target="_blank" rel="noopener">{title}</a></li>'.format(url=url, title=title)
-        for title, url in PUBLIC_LECTURES
-    )
-
-    body = """    <section class="block container" style="padding-top:48px;">
-      <h1>Public Lectures</h1>
-      <ul class="plain-list">
-{items}
-      </ul>
-    </section>
-""".format(items=items)
-    write_page(
-        "talks.html",
-        "Public Lectures",
-        "Public lectures and recorded talks by Nicholas B. King on public health ethics, health inequalities, and the COVID-19 pandemic.",
-        body,
-    )
-
-
 # ---------------------------------------------------------------- software.html
 
 def build_software():
@@ -405,7 +373,6 @@ def build_media():
 if __name__ == "__main__":
     build_index()
     build_publications()
-    build_talks()
     build_software()
     build_teaching()
     build_contact()

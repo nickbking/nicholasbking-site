@@ -198,6 +198,7 @@ MEDIA = [
     ("2023", "California Expands Program That Pays People to Stop Using Drugs", "KQED Forum (5 Sept)", "https://www.kqed.org/forum/2010101894281/california-expands-program-that-pays-people-to-stop-using-drugs"),
     ("2022", "A spike in pandemic-related mental illness has overwhelmed Canada’s health care system", "The Conversationalists (24 Feb)", "https://conversationalist.org/2022/02/24/in-canada-the-pandemic-has-had-a-severe-impact-on-mental-health-but-help-is-elusive/"),
     ("2022", "Emerging health law ethics challenges with Dr. Nicholas King", "McGill Journal of Law and Health Podcast (23 Feb)", "https://anchor.fm/mcgill-journal-of-law-and-health/episodes/Emerging-health-law-ethics-challenges-with-Dr--Nicholas-King-e1eqhj0"),
+    ("2022", "Defining freedom in the time of COVID", "Webcast", "https://www.youtube.com/watch?v=p98ex_FeMWA"),
     ("2021", "The pandemic exposed Montreal’s inequalities, and residents say it’s time to tackle root causes", "CBC News (3 Nov)", "https://www.cbc.ca/news/canada/montreal/covid-19-montreal-disparity-solutions-1.6232359"),
     ("2021", "Peut-on parler de « décès acceptables » de la COVID-19?", "Radio-Canada (9 Oct)", "https://ici.radio-canada.ca/nouvelle/1830245/morts-ethique-pratique-normale-sante-pandemie"),
     ("2021", "Concerns raised over travel based on type of COVID-19 vaccine received", "Global News (22 July)", "https://globalnews.ca/news/8053372/covid-vaccine-travel-inequality-coronavirus/"),
@@ -220,6 +221,9 @@ MEDIA = [
     ("2020", "The pandemic pods choosing friendship over public health", "MEL Magazine (20 April)", "https://melmagazine.com/en-us/story/the-pandemic-pods-choosing-friendship-over-public-health?"),
     ("2020", "Better late than never? What to expect from COVID-19 modeling — if Manitoba ever reveals it", "CBC News (22 April)", "https://www.cbc.ca/news/canada/manitoba/covid-19-projections-manitoba-1.5537416"),
     ("2020", "Reporting COVID-19 numbers in small communities", "CBC Radio (6 April)", "https://www.cbc.ca/listen/live-radio/1-87-quebec-am/clip/15769459-reporting-covid-19-numbers-in-small-communities"),
+    ("2020", "Weaponizing Uncertainty During the COVID-19 Pandemic", "Webinar", "https://www.youtube.com/watch?v=gZxu9fg1iYU"),
+    ("2020", "Health Disparities Amid the COVID-19 Pandemic", "Webinar", "https://www.mcgill.ca/maxbellschool/article/policy-challenges-during-pandemic-video/video-health-disparities-amid-covid-19-pandemic"),
+    ("2020", "Evidence and Uncertainty During the COVID-19 Pandemic", "MBSPP briefing note", "https://www.mcgill.ca/maxbellschool/article/briefing-evidence-and-uncertainty-during-covid-19-pandemic"),
     ("2017", "The ethics of safe injection sites", "CTV News (2 Mar)", "https://montreal.ctvnews.ca/video?clipId=1069382&playlistId=1.3308412&binId=1.1332485&playlistPageNum=1"),
 ]
 
