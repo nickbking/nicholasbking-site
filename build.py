@@ -11,6 +11,7 @@ SITE = os.path.dirname(os.path.abspath(__file__))
 
 NAV = [
     ("index.html", "Home"),
+    ("about.html", "About Me"),
     ("publications.html", "Publications"),
     ("software.html", "Software"),
     ("teaching.html", "Teaching"),
@@ -104,7 +105,7 @@ HOMEPAGE_RESEARCH = [
         "title": "A large language model-based tool for identifying relationships to industry in research on the carcinogenicity of benzene, cobalt, and aspartame",
         "authors": "DeBono N, Amar V, Hardy H, Schubauer-Berigan M, Ruths D, King NB.",
         "venue": "<em>Environmental Health</em> 24:64 (2025)",
-        "description": "A proof-of concept paper introducing InfluenceMapper, a large language model-based tool that identifies extracts and analyzes disclosure information in scientific papers. InfluenceMapper is applied to a sample of 2046 papers to assess industry sponsorship and relationships in research on the carcinogenicity of benzene, cobalt, and aspartame.",
+        "description": "A proof-of concept paper applying InfluenceMapper, an automated tool that extracts and analyzes disclosure information in scientific papers, to a sample of 2046 papers to assess industry engagement with research on selected carcinogens.",
         "url": "https://doi.org/10.1186/s12940-025-01223-1",
     },
     {
@@ -148,6 +149,10 @@ def build_index():
           <div class="hero-photo">
             <img src="images/headshot-full.jpg" alt="Portrait of Nicholas B. King" width="240" height="300">
           </div>
+          <blockquote class="hero-quote">
+            <p>Well, I am a dilettante. It&rsquo;s only in England that dilettantism is considered a bad thing. In other countries it&rsquo;s called interdisciplinary research.</p>
+            <cite>&mdash; Brian Eno</cite>
+          </blockquote>
           <h1>Nicholas B. King</h1>
 
           <p class="position-block">
@@ -167,18 +172,6 @@ def build_index():
             <a class="btn btn-secondary" href="mailto:nicholas.king@mcgill.ca">Contact</a>
             <a class="btn btn-secondary" href="https://scholar.google.ca/citations?user=LWgI4HgAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
           </div>
-
-          <h2 class="section-title">About Me</h2>
-          <p>I study how evidence, expertise, and value judgments shape public health and public
-          policy, and how these tools can be manipulated and may encode assumptions that go
-          unexamined. My early research examined the history and politics of emerging infectious
-          disease and biosecurity. I have since turned my attention to the measurement and framing
-          of health inequalities, the ethics of harm reduction and opioid policy, and, most
-          recently, the use of machine learning and large language models to improve scientific
-          transparency. I teach courses on artificial intelligence and public policy, evidence and
-          expertise in policy, and public health ethics at McGill University. In my spare time I
-          play the bass, compose music, go rock climbing, and take pictures. I&rsquo;m also
-          learning to play the drums.</p>
         </div>
 
         <div class="hero-right">
@@ -194,6 +187,60 @@ def build_index():
         "index.html",
         "Home",
         "Nicholas B. King is an Associate Professor at McGill University working on public health policy, ethics, health inequalities, and AI in public policy.",
+        body,
+    )
+
+
+# ---------------------------------------------------------------- about.html
+
+ABOUT_TEXT_PARAGRAPHS = [
+    "I&rsquo;m an Associate Professor at McGill University, with appointments in the "
+    "Department of Equity, Ethics, and Policy, and the Department of Epidemiology, "
+    "Biostatistics, and Occupational Health, both in the Faculty of Medicine; and in the "
+    "Max Bell School of Public Policy. I am also the associate director of the Trottier "
+    "Institute for Science and Public Policy.",
+
+    "I&rsquo;m interested in opening black boxes. I study how evidence, expertise, and value "
+    "judgments shape public health and public policy, and how commonly-used tools and "
+    "approaches can be manipulated and may encode assumptions that go unexamined.",
+
+    "My early research examined the history and politics of emerging infectious disease, "
+    "antimicrobial resistance, and biosecurity. I have since turned my attention to the "
+    "measurement and framing of health inequalities, the ethics of harm reduction and opioid "
+    "policy, and, most recently, the use of machine learning and large language models to "
+    "improve scientific transparency.",
+
+    "I teach courses on artificial intelligence and public policy, evidence and expertise in "
+    "policy, and public health ethics at McGill University.",
+
+    "In my spare time I play the bass, compose music, go rock climbing, and take pictures. "
+    "I&rsquo;m also learning to play the drums.",
+]
+
+
+ABOUT_PHOTO_HEIGHT = 405
+
+def build_about(image_src="images/about-mountain.jpg", image_alt="Photograph by Nicholas B. King", filename="about.html", photo_height=None):
+    paragraphs_html = "\n".join(
+        "            <p>{}</p>".format(p) for p in ABOUT_TEXT_PARAGRAPHS
+    )
+    photo_height = photo_height if photo_height is not None else ABOUT_PHOTO_HEIGHT
+    body = """    <section class="block about-section container">
+      <div class="about-grid" style="--about-photo-height: {photo_height}px;">
+        <div class="about-photo">
+          <img src="{image_src}" alt="{image_alt}">
+        </div>
+        <div class="about-text">
+          <h1>About Me</h1>
+{paragraphs_html}
+        </div>
+      </div>
+    </section>
+""".format(image_src=image_src, image_alt=image_alt, paragraphs_html=paragraphs_html, photo_height=photo_height)
+    write_page(
+        filename,
+        "About Me",
+        "About Nicholas B. King, Associate Professor at McGill University.",
         body,
     )
 
@@ -228,11 +275,10 @@ def build_publications():
 
     body = """    <section class="block container" style="padding-top:48px;">
       <h1>Publications</h1>
-      <p style="color:var(--color-muted);">{total} publications. Filter by type below.</p>
 
       <div class="tab-strip">
         <button class="tab-btn active" data-tab="all">All</button>
-        <button class="tab-btn" data-tab="articles">Journal Articles</button>
+        <button class="tab-btn" data-tab="articles">Peer-reviewed Articles</button>
         <button class="tab-btn" data-tab="chapters">Book Chapters</button>
         <button class="tab-btn" data-tab="other">Other</button>
       </div>
@@ -372,6 +418,7 @@ def build_media():
 
 if __name__ == "__main__":
     build_index()
+    build_about()
     build_publications()
     build_software()
     build_teaching()
