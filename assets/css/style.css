@@ -271,7 +271,7 @@ section.about-section {
 
 .about-grid {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 44px;
 }
 
